@@ -73,7 +73,7 @@ export function AIAgencyCommandCenter() {
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full max-w-lg mx-auto py-10 min-h-[440px] flex items-center justify-center select-none cursor-pointer"
+      className="relative w-full max-w-lg mx-auto py-6 sm:py-10 min-h-[380px] sm:min-h-[440px] flex items-center justify-center select-none cursor-pointer scale-[0.82] sm:scale-100 origin-center"
       style={{ perspective: 1000 }}
     >
       {/* ── AMBIENT SUNSET NEURAL GLOW ── */}

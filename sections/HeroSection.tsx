@@ -60,7 +60,7 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold shadow-xs"
             >
               <Sparkles className="w-4 h-4 text-[var(--brand-orange)]" />
-              <span className="uppercase tracking-widest gradient-text-brand font-black">Jalgaon's Premier Digital Growth Agency</span>
+              <span className="uppercase tracking-widest gradient-text-brand font-black">India&apos;s Premier Digital Growth Agency • Jalgaon HQ</span>
               <span className="w-2 h-2 rounded-full bg-[var(--brand-orange)] animate-ping" />
             </motion.div>
 
@@ -69,11 +69,11 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[1.08]"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[1.1] sm:leading-[1.08]"
             >
               We Build Brands <br className="hidden sm:inline" />
               That{" "}
-              <span className="inline-block relative min-w-[140px] sm:min-w-[220px] text-left">
+              <span className="inline-block relative min-w-[110px] sm:min-w-[200px] text-left">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={dynamicWords[wordIndex]}
@@ -89,7 +89,7 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
 
                 {/* ── ANIMATED ORGANIC CURVED HAND-WRITTEN VECTOR UNDERLINE ── */}
                 <svg
-                  className="absolute -bottom-3 sm:-bottom-4 left-0 w-full h-4 sm:h-5 overflow-visible pointer-events-none"
+                  className="absolute -bottom-2.5 sm:-bottom-4 left-0 w-full h-3.5 sm:h-5 overflow-visible pointer-events-none"
                   viewBox="0 0 200 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,9 +137,9 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium"
             >
-              We combine creative storytelling, cutting-edge technology, and performance digital marketing to help businesses build dominant brands and achieve revenue growth.
+              We combine creative storytelling, cutting-edge technology, and performance digital marketing to help ambitious businesses across Maharashtra and Pan-India build dominant brands and achieve exponential revenue growth.
             </motion.p>
 
             {/* CTA Button Cluster */}
@@ -147,22 +147,26 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2"
             >
-              <button
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={onOpenContact}
-                className="btn-sunset px-8 py-4 rounded-full text-base sm:text-lg flex items-center justify-center gap-3 w-full sm:w-auto shadow-xl"
+                className="btn-sunset px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg flex items-center justify-center gap-3 w-full sm:w-auto shadow-xl cursor-pointer"
               >
                 <span>Scale Your Brand</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={handleScrollToServices}
-                className="px-8 py-4 rounded-full text-base font-bold bg-white border border-slate-200 text-slate-800 hover:bg-slate-100 transition-colors w-full sm:w-auto shadow-xs"
+                className="px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-base font-bold bg-white border border-slate-200 text-slate-800 hover:bg-slate-100 transition-colors w-full sm:w-auto shadow-xs cursor-pointer"
               >
                 <span>Explore Services</span>
-              </button>
+              </motion.button>
             </motion.div>
 
             {/* Verified Trust Markers */}
@@ -174,15 +178,15 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
             >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4.5 h-4.5 text-[var(--brand-orange)]" />
-                <span><strong className="text-slate-900">100+</strong> Projects Scaled</span>
+                <span><strong className="text-slate-900">100+</strong> Brands Scaled Pan-India</span>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4.5 h-4.5 text-[var(--brand-magenta)]" />
-                <span><strong className="text-slate-900">4+ Years</strong> Agency Expertise</span>
+                <span><strong className="text-slate-900">Full-Stack</strong> Creative &amp; Tech</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="w-4.5 h-4.5 text-[var(--brand-yellow)]" />
-                <span><strong className="text-slate-900">Jalgaon, MH</strong> Headquarters</span>
+                <span><strong className="text-slate-900">Jalgaon HQ</strong> • Pan-India Reach</span>
               </div>
             </motion.div>
 

@@ -27,6 +27,7 @@ export const siteData = {
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Skill District", href: "/skill-district" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" }
   ]
 };

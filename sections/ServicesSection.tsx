@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   TrendingUp, Monitor, Palette, Video, Sparkles, CheckCircle2, ArrowRight,
-  Search, Share2, Layout, Film, Code, Target, MapPin, FileText, Zap, Compass, ArrowUpRight
+  Search, Share2, Layout, Film, Code, Target, MapPin, FileText, Zap, Compass, ArrowUpRight, MailOpen
 } from "lucide-react";
 import { servicesData, Service } from "@/data/services";
 import { AmbientBackgroundElements } from "@/components/ui/AmbientBackgroundElements";
@@ -28,7 +28,8 @@ const iconMap: Record<string, React.ElementType> = {
   MapPin,
   FileText,
   Zap,
-  Compass
+  Compass,
+  MailOpen
 };
 
 const ACCENT_GRADIENTS = [

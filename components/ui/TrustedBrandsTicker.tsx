@@ -85,21 +85,21 @@ export function TrustedBrandsTicker() {
       {/* Seamless Ambient Dot Matrix & Brand Gradient Layer */}
       <AmbientBackgroundElements />
 
-      <div className="max-w-[95%] lg:max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-[96%] lg:max-w-[1400px] mx-auto px-2 sm:px-6 relative z-10">
         
         {/* Pill Container */}
-        <div className="flex items-stretch rounded-[3rem] border border-slate-200/90 hover:border-[var(--brand-orange)]/40 transition-colors duration-500 bg-white/95 backdrop-blur-md shadow-[0_10px_35px_-10px_rgba(0,0,0,0.05)] overflow-hidden h-[140px]">
+        <div className="flex items-stretch rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] border border-slate-200/90 hover:border-[var(--brand-orange)]/40 transition-colors duration-500 bg-white/95 backdrop-blur-md shadow-[0_10px_35px_-10px_rgba(0,0,0,0.05)] overflow-hidden h-[88px] sm:h-[110px] md:h-[140px]">
           
           {/* Left Block */}
-          <div className="hidden md:flex items-center gap-6 shrink-0 pl-12 pr-14 bg-slate-50/30 relative">
-            <h3 className="text-xl font-black text-slate-800 leading-tight">
+          <div className="hidden md:flex items-center gap-6 shrink-0 pl-10 md:pl-12 pr-12 md:pr-14 bg-slate-50/30 relative">
+            <h3 className="text-lg md:text-xl font-black text-slate-800 leading-tight">
               Trusted By <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand-orange)] to-[var(--brand-magenta)]">
                 Top Companies
               </span>
             </h3>
-            <div className="w-10 h-10 rounded-full bg-[var(--brand-orange)]/10 flex items-center justify-center group-hover:bg-[var(--brand-orange)]/20 transition-colors">
-              <ArrowUpRight className="w-5 h-5 text-[var(--brand-orange)]" />
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[var(--brand-orange)]/10 flex items-center justify-center group-hover:bg-[var(--brand-orange)]/20 transition-colors">
+              <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-[var(--brand-orange)]" />
             </div>
 
             {/* Premium Gradient Divider */}
@@ -110,22 +110,22 @@ export function TrustedBrandsTicker() {
           <div className="flex-1 overflow-hidden relative flex items-center bg-white">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
-              transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-              className="flex items-center gap-24 whitespace-nowrap pl-12 shrink-0"
+              transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+              className="flex items-center gap-12 sm:gap-18 md:gap-24 whitespace-nowrap pl-6 sm:pl-12 shrink-0"
             >
               {[...companies, ...companies, ...companies, ...companies].map((company, i) => {
                 const Logo = company.Logo;
                 return (
-                  <div key={i} className="flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 hover:-translate-y-1.5 transition-all duration-300 cursor-default group">
-                    <Logo className="h-11 w-auto text-slate-600 group-hover:text-[var(--brand-orange)] transition-colors duration-300" />
+                  <div key={i} className="flex flex-col items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 hover:-translate-y-1 transition-all duration-300 cursor-default group">
+                    <Logo className="h-7 sm:h-9 md:h-11 w-auto text-slate-600 group-hover:text-[var(--brand-orange)] transition-colors duration-300" />
                   </div>
                 );
               })}
             </motion.div>
             
             {/* Fade Gradients for smooth entrance/exit */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           </div>
           
         </div>

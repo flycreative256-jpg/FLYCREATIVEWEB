@@ -25,15 +25,15 @@ export function FounderSection() {
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
       {/* 1. Giant Background Watermark Typography */}
-      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none z-0 flex justify-center items-center">
-        <h1 className="text-[10rem] sm:text-[18rem] lg:text-[24rem] font-black uppercase tracking-tighter opacity-[0.08] bg-clip-text text-transparent bg-gradient-to-b from-[var(--brand-orange)] via-[var(--brand-magenta)] to-transparent leading-none select-none">
+      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none z-0 flex justify-center items-center overflow-hidden">
+        <h1 className="text-[5.5rem] sm:text-[12rem] md:text-[18rem] lg:text-[24rem] font-black uppercase tracking-tighter opacity-[0.08] bg-clip-text text-transparent bg-gradient-to-b from-[var(--brand-orange)] via-[var(--brand-magenta)] to-transparent leading-none select-none">
           VISIONARY
         </h1>
       </div>
 
       {/* 2. Cyber Ambient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-gradient-to-tr from-[var(--brand-orange)]/10 via-[var(--brand-magenta)]/5 to-transparent rounded-full blur-[160px] pointer-events-none z-0" />
-      <div className="absolute bottom-1/4 right-1/4 w-[40rem] h-[40rem] bg-gradient-to-br from-[#7C4DFF]/10 via-[var(--brand-orange)]/5 to-transparent rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute top-1/4 left-1/4 w-[20rem] sm:w-[40rem] h-[20rem] sm:h-[40rem] bg-gradient-to-tr from-[var(--brand-orange)]/10 via-[var(--brand-magenta)]/5 to-transparent rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute bottom-1/4 right-1/4 w-[20rem] sm:w-[40rem] h-[20rem] sm:h-[40rem] bg-gradient-to-br from-[#7C4DFF]/10 via-[var(--brand-orange)]/5 to-transparent rounded-full blur-[160px] pointer-events-none z-0" />
 
       {/* 3. Abstract Geometric Dashed Rings */}
       <motion.div 
@@ -47,7 +47,7 @@ export function FounderSection() {
       </motion.div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
           
           {/* Left Column: Ultra-Clean Executive Portrait */}
           <div className="lg:col-span-5 relative">
@@ -56,12 +56,12 @@ export function FounderSection() {
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[var(--brand-orange)]/20 via-transparent to-[var(--brand-magenta)]/20 opacity-50 blur-2xl pointer-events-none" />
 
             {/* High-Definition Portrait Card Container */}
-            <div className="relative max-w-[380px] mx-auto lg:mx-0 group mt-10 lg:mt-0">
+            <div className="relative max-w-[300px] sm:max-w-[380px] mx-auto lg:mx-0 group mt-6 lg:mt-0">
               
               {/* Offset Cyber Frame */}
               <motion.div 
                 style={{ y: useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]) }}
-                className="absolute -inset-5 border border-[var(--brand-orange)]/30 rounded-3xl hidden md:block z-0"
+                className="absolute -inset-4 sm:-inset-5 border border-[var(--brand-orange)]/30 rounded-3xl hidden md:block z-0"
               >
                 {/* Crosshairs at corners */}
                 <div className="absolute -top-3 -left-3 text-[var(--brand-orange)]/60 text-lg font-light leading-none">+</div>
@@ -94,8 +94,8 @@ export function FounderSection() {
 
               {/* Floating Stamp Badge */}
               <motion.div
-                style={{ y: useTransform(scrollYProgress, [0, 1], ["25%", "-25%"]) }}
-                className="absolute -bottom-8 -right-6 md:-right-10 z-20 w-28 h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center backdrop-blur-md bg-white/[0.03] border border-white/10 shadow-2xl"
+                style={{ y: useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]) }}
+                className="absolute -bottom-6 sm:-bottom-8 -right-4 sm:-right-6 md:-right-10 z-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center backdrop-blur-md bg-white/[0.03] border border-white/10 shadow-2xl"
               >
                 {/* Rotating Text */}
                 <motion.div 

@@ -166,13 +166,15 @@ export function SkillDistrict({ onOpenContact }: SkillDistrictProps) {
               </p>
             </div>
 
-            <button
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => onOpenContact("Skill District Direct Application")}
-              className="btn-sunset px-8 py-4 rounded-full text-sm sm:text-base font-bold flex items-center gap-3 shrink-0 shadow-xl shadow-[var(--brand-orange)]/25"
+              className="btn-sunset px-8 py-4 rounded-full text-sm sm:text-base font-bold flex items-center justify-center gap-3 w-full sm:w-auto shrink-0 shadow-xl shadow-[var(--brand-orange)]/25 cursor-pointer"
             >
               <span>Get Admission Details</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </motion.button>
           </div>
         </div>
 

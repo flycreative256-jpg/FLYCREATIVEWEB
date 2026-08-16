@@ -149,5 +149,15 @@ export const servicesData: Service[] = [
     badge: "Roadmap",
     features: ["Competitor Analysis", "Customer Journey Mapping", "Tech & Tool Stack Setup", "Growth Milestones"],
     deliverables: ["Strategic Growth PDF", "Competitor Matrix", "Budget Allocation Plan", "Quarterly Roadmap"]
+  },
+  {
+    id: "web-invitation",
+    title: "Web Invitation",
+    shortDesc: "Luxurious, interactive mobile-first digital web invitations for weddings, corporate galas, grand openings & milestone events.",
+    fullDesc: "Ditch traditional static paper cards. We create bespoke, animated mobile-first digital web invitations with interactive WhatsApp RSVP, countdown timers, photo & video galleries, event itineraries, and direct 1-click Google Maps venue navigation.",
+    iconName: "MailOpen",
+    badge: "Interactive & Trendy",
+    features: ["Interactive Mobile-First UI", "1-Click WhatsApp RSVP", "Google Maps Venue Navigation", "Music, Gallery & Countdown Timer"],
+    deliverables: ["Custom Hosted Live Web Link", "WhatsApp Teaser Card & Story", "Live RSVP Guest Tracking", "Printable QR Code for Envelopes"]
   }
 ];

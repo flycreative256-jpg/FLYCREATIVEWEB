@@ -87,10 +87,7 @@ export function Header({ onOpenContact }: HeaderProps) {
               className="group focus:outline-none shrink-0"
               aria-label="Fly Creative Solutions - Home"
             >
-              <div
-                className="relative group-hover:scale-105 transition-transform duration-300"
-                style={{ width: "270px", height: "72px" }}
-              >
+              <div className="relative w-[180px] sm:w-[220px] md:w-[270px] h-[48px] sm:h-[58px] md:h-[72px] group-hover:scale-105 transition-transform duration-300">
                 {/* Layer A: fly-logo-color — Full color FLYCREATIVE */}
                 <motion.img
                   src="/logo/fly-logo-color.png"
@@ -135,24 +132,27 @@ export function Header({ onOpenContact }: HeaderProps) {
 
             {/* ── CTA Button ── */}
             <div className="hidden sm:flex items-center shrink-0">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={onOpenContact}
-                className="btn-sunset px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg group/btn"
+                className="btn-sunset px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg group/btn cursor-pointer"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-              </button>
+              </motion.button>
             </div>
 
             {/* ── Mobile Hamburger ── */}
             <div className="lg:hidden flex items-center shrink-0">
-              <button
+              <motion.button
+                whileTap={{ scale: 0.92 }}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-full bg-white/10 border border-white/20 text-white hover:text-[var(--brand-orange)] focus:outline-none"
+                className="p-2.5 rounded-full bg-white/10 border border-white/20 text-white hover:text-[var(--brand-orange)] focus:outline-none cursor-pointer"
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
+              </motion.button>
             </div>
 
           </div>
@@ -163,45 +163,49 @@ export function Header({ onOpenContact }: HeaderProps) {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -15, scale: 0.96 }}
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -15, scale: 0.96 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-3 top-[76px] z-30 lg:hidden max-w-xl mx-auto"
+            exit={{ opacity: 0, y: -15, scale: 0.95 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed inset-x-3 top-[72px] sm:top-[80px] z-30 lg:hidden max-w-xl mx-auto"
           >
-            <div className="obsidian-card rounded-3xl p-6 border border-white/20 shadow-2xl space-y-4 backdrop-blur-2xl">
-              <div className="flex flex-col space-y-1">
-                {siteData.navLinks.map((link) => (
-                  <a
+            <div className="obsidian-card rounded-3xl p-5 sm:p-6 border border-white/20 shadow-2xl space-y-4 backdrop-blur-2xl">
+              <div className="flex flex-col space-y-1.5">
+                {siteData.navLinks.map((link, idx) => (
+                  <motion.a
                     key={link.name}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.04, duration: 0.2 }}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`px-4 py-3 text-sm font-semibold rounded-2xl transition-colors flex items-center justify-between ${
+                    className={`px-4 py-3 text-sm font-bold rounded-2xl transition-all flex items-center justify-between active:scale-[0.98] ${
                       isActive(link.href)
-                        ? "text-white bg-gradient-to-r from-[var(--brand-orange)]/20 to-[var(--brand-magenta)]/20 border border-white/10"
+                        ? "text-white bg-gradient-to-r from-[var(--brand-orange)]/25 to-[var(--brand-magenta)]/25 border border-white/15 shadow-sm"
                         : "text-slate-200 hover:text-white hover:bg-white/10"
                     }`}
                   >
                     <span>{link.name}</span>
                     <ArrowRight className="w-4 h-4 text-slate-400" />
-                  </a>
+                  </motion.a>
                 ))}
               </div>
 
               <div className="pt-4 border-t border-slate-800/80 space-y-3">
-                <button
+                <motion.button
+                  whileTap={{ scale: 0.97 }}
                   onClick={() => { setMobileMenuOpen(false); onOpenContact(); }}
-                  className="btn-sunset w-full py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2"
+                  className="btn-sunset w-full py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[var(--brand-orange)]/20"
                 >
                   <span>Let&apos;s Talk Project</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
-                <div className="flex items-center justify-around text-xs text-slate-400 pt-2 font-medium">
-                  <a href={`tel:${siteData.phone}`} className="flex items-center gap-1 hover:text-[#F4B333]">
-                    <Phone className="w-3.5 h-3.5 text-[#F4B333]" /> {siteData.phone}
+                </motion.button>
+                <div className="flex items-center justify-around text-xs text-slate-300 pt-1 font-medium">
+                  <a href={`tel:${siteData.phone}`} className="flex items-center gap-1.5 hover:text-[var(--brand-orange)] transition-colors py-1">
+                    <Phone className="w-3.5 h-3.5 text-[var(--brand-orange)]" /> {siteData.phone}
                   </a>
-                  <a href={`mailto:${siteData.email}`} className="flex items-center gap-1 hover:text-[#F4B333]">
-                    <Mail className="w-3.5 h-3.5 text-[#F4B333]" /> Email Us
+                  <a href={`mailto:${siteData.email}`} className="flex items-center gap-1.5 hover:text-[var(--brand-orange)] transition-colors py-1">
+                    <Mail className="w-3.5 h-3.5 text-[var(--brand-magenta)]" /> Email Us
                   </a>
                 </div>
               </div>

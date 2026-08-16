@@ -11,41 +11,43 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteData.websiteUrl),
-  title: "Fly Creative Solutions | Top Digital Marketing Agency in Jalgaon",
-  description: "Fly Creative Solutions is a leading Digital Marketing Agency in Jalgaon, Maharashtra. We specialize in SEO, Social Media Marketing, Web Development, Branding, Video Editing, and Skill District training.",
+  title: "Fly Creative Solutions | Best Digital Marketing & Web Agency in Jalgaon • Pan-India",
+  description: "Fly Creative Solutions is India's premier digital growth agency headquartered in Jalgaon, Maharashtra. We deliver high-ROI performance ads, viral 9:16 video reels, Next.js web engineering, and local SEO for ambitious brands across Jalgaon, Maharashtra, and nationwide across India.",
   keywords: [
     "Digital Marketing Agency in Jalgaon",
-    "Digital Marketing Company in Jalgaon",
-    "SEO Company in Jalgaon",
+    "Best Digital Marketing Company in Jalgaon",
+    "Top SEO Company in Jalgaon",
     "Social Media Marketing Agency in Jalgaon",
-    "Creative Agency in Jalgaon",
+    "Digital Marketing Agency Maharashtra",
+    "Performance Marketing Agency India",
     "Web Design Company in Jalgaon",
-    "Graphic Design Jalgaon",
+    "Next.js Web Development Agency India",
+    "Creative Advertising Agency Jalgaon",
     "Skill District Jalgaon"
   ],
   authors: [{ name: siteData.name }],
   creator: siteData.name,
   openGraph: {
-    title: "Fly Creative Solutions | Creative Ideas. Digital Growth.",
-    description: "Build stronger brands and achieve meaningful digital growth with Jalgaon's premier digital agency.",
+    title: "Fly Creative Solutions | Digital Growth Agency Jalgaon & India",
+    description: "Build dominant brands and achieve high-ROI digital growth with Jalgaon's premier digital agency serving clients nationwide.",
     url: siteData.websiteUrl,
     siteName: siteData.name,
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "/logo/IMG_2933.PNG",
+        url: "/logo/fly-logo-color.png",
         width: 1200,
         height: 630,
-        alt: "Fly Creative Solutions Logo"
+        alt: "Fly Creative Solutions - Digital Agency Jalgaon & India"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fly Creative Solutions | Digital Agency in Jalgaon",
-    description: "Creative Ideas. Digital Growth. Top Digital Marketing & Web Agency in Jalgaon.",
-    images: ["/logo/IMG_2933.PNG"]
+    title: "Fly Creative Solutions | Digital Agency in Jalgaon & India",
+    description: "Creative Ideas. Digital Growth. Top Digital Marketing & Web Agency in Jalgaon serving brands pan-India.",
+    images: ["/logo/fly-logo-color.png"]
   },
   robots: {
     index: true,
@@ -68,8 +70,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": siteData.name,
-    "image": `${siteData.websiteUrl}/logo/IMG_1392.PNG`,
-    "description": "Leading Digital Marketing, Web Design, Branding, and SEO Agency in Jalgaon, Maharashtra.",
+    "alternateName": "Fly Creative Solutions Jalgaon",
+    "image": `${siteData.websiteUrl}/logo/fly-logo-color.png`,
+    "description": "Leading Digital Marketing, Web Development, Branding, and SEO Agency headquartered in Jalgaon, Maharashtra, serving businesses across India.",
     "telephone": siteData.phone,
     "email": siteData.email,
     "address": {
@@ -85,6 +88,20 @@ export default function RootLayout({
       "latitude": "21.0077",
       "longitude": "75.5626"
     },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Jalgaon"
+      },
+      {
+        "@type": "State",
+        "name": "Maharashtra"
+      },
+      {
+        "@type": "Country",
+        "name": "India"
+      }
+    ],
     "url": siteData.websiteUrl,
     "priceRange": "₹₹",
     "sameAs": [

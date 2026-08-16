@@ -53,7 +53,7 @@ export function GetInTouchSection() {
             <div className="relative z-10 space-y-3">
               <p className="text-xs font-black text-[var(--brand-yellow)] uppercase tracking-widest">Fly Creative Solutions</p>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Jalgaon&apos;s leading digital growth agency — helping brands fly higher with strategy, design &amp; performance.
+                Headquartered in Jalgaon, Maharashtra — scaling ambitious brands across India with cutting-edge strategy, design &amp; performance.
               </p>
             </div>
 

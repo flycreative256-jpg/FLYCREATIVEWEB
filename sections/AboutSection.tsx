@@ -60,7 +60,7 @@ export function AboutSection({ onOpenContact }: AboutSectionProps) {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal"
             >
-              We are a premier digital marketing and branding agency in <strong>Jalgaon, Maharashtra</strong> built to accelerate brands into market leaders through high-impact content, social media marketing, performance campaigns, and web engineering.
+              We are India&apos;s premier digital marketing and branding agency headquartered in <strong>Jalgaon, Maharashtra</strong>, built to accelerate ambitious brands nationwide into market leaders through high-impact viral content, performance ad funnels, and Next.js web engineering.
             </motion.p>
 
             <motion.p
@@ -70,7 +70,7 @@ export function AboutSection({ onOpenContact }: AboutSectionProps) {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-slate-500 text-sm leading-relaxed"
             >
-              Founded with a mission to deliver real business speed and revenue growth, we combine four growth pillars — <strong>Creative, Marketing, Technology, and Strategy</strong> — into a unified digital execution engine.
+              Founded with a mission to deliver real business speed and revenue growth, we combine four growth pillars — <strong>Creative, Marketing, Technology, and Strategy</strong> — into a unified digital execution engine serving businesses across India.
             </motion.p>
 
             {/* Checkmark Highlights */}
@@ -87,7 +87,7 @@ export function AboutSection({ onOpenContact }: AboutSectionProps) {
               </div>
               <div className="flex items-center gap-2.5 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-[var(--brand-orange)] shrink-0" />
-                <span>Dedicated Jalgaon Support Team</span>
+                <span>Serving Brands Across India</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-[var(--brand-orange)] shrink-0" />
@@ -95,7 +95,7 @@ export function AboutSection({ onOpenContact }: AboutSectionProps) {
               </div>
               <div className="flex items-center gap-2.5 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-[var(--brand-orange)] shrink-0" />
-                <span>Custom High-Speed Tech Stack</span>
+                <span>Custom Next.js Tech Architecture</span>
               </div>
             </motion.div>
 

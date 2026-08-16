@@ -9,11 +9,19 @@
     --brand-magenta: #BD217E;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     background-color: var(--bg-main);
     color: #0F172A;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
     selection-background-color: var(--brand-orange);
     selection-color: #ffffff;
   }

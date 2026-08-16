@@ -53,8 +53,8 @@ const values = [
   },
   {
     icon: Globe,
-    title: "Think Global, Act Local",
-    desc: "We bring global digital marketing best practices and apply them to help Jalgaon businesses compete at every level.",
+    title: "Pan-India Reach, Jalgaon Roots",
+    desc: "We bring world-class creative frameworks and performance ad strategies, helping businesses in Maharashtra and nationwide dominate their markets.",
     color: "text-emerald-400",
     bg: "bg-emerald-400/10 border-emerald-400/30"
   }
@@ -68,13 +68,12 @@ const pillars = [
 ];
 
 const milestones = [
-  { year: "2020", title: "Founded in Jalgaon", desc: "Started as a small creative studio with a big vision to transform how local businesses market themselves." },
-  { year: "2021", title: "First 25 Clients", desc: "Grew to serving 25+ clients across Jalgaon and Dhule, delivering measurable social media and branding results." },
-  { year: "2022", title: "Web & Tech Services", desc: "Expanded into website development and digital advertising, becoming a full-service agency." },
-  { year: "2023", title: "Skill District Launched", desc: "Launched our educational arm — Skill District — to train the next generation of digital creators." },
-  { year: "2024", title: "100+ Projects & Growing", desc: "Crossed 100 completed projects for clients across 15+ industries with a dedicated in-house team." },
-  { year: "2025", title: "Pan-India Expansion & AI Tech", desc: "Expanded operations nationwide and integrated cutting-edge AI workflows into brand production and marketing." },
-  { year: "2026", title: "Global Reach & 250+ Brands", desc: "Scaled international client partnerships across UAE & US while empowering over 500+ creators via The Skill District." }
+  { year: "2020", title: "Founded in Jalgaon", desc: "Started as a passionate creative studio with a vision to build a premier digital growth engine in North Maharashtra." },
+  { year: "2021", title: "First 25 Clients", desc: "Delivered measurable social media, branding, and local search growth for businesses across Maharashtra." },
+  { year: "2022", title: "Web & Tech Services", desc: "Expanded into high-performance web development and multi-platform digital advertising." },
+  { year: "2023", title: "Skill District Launched", desc: "Launched our educational arm — Skill District — to train top-tier digital marketers, editors, and designers." },
+  { year: "2024", title: "100+ Projects Across India", desc: "Crossed 100+ projects for clients across Jalgaon, Pune, Mumbai, Bengaluru, and Delhi NCR." },
+  { year: "2025-26", title: "Pan-India Growth Powerhouse", desc: "Managing national performance ad budgets, viral content production, and enterprise Next.js engineering." }
 ];
 
 export function AboutPageClient() {

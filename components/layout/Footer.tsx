@@ -165,11 +165,17 @@ export function Footer({ onOpenContact }: FooterProps) {
                   Links
                 </h4>
                 <ul className="space-y-3 text-sm font-medium text-slate-300">
-                  <li><a href="#hero" className="hover:text-[var(--brand-yellow)] transition-colors">About</a></li>
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">Our Services</a></li>
-                  <li><a href="#portfolio" className="hover:text-[var(--brand-yellow)] transition-colors">Recent Projects</a></li>
-                  <li><a href="#process" className="hover:text-[var(--brand-yellow)] transition-colors">Agency Workflow</a></li>
-                  <li><a href="#contact" onClick={(e) => { e.preventDefault(); onOpenContact(); }} className="hover:text-[var(--brand-yellow)] transition-colors">Contact Us</a></li>
+                  <li><a href="/about" className="hover:text-[var(--brand-yellow)] transition-colors">About Us</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Our Services</a></li>
+                  <li><a href="/portfolio" className="hover:text-[var(--brand-yellow)] transition-colors">Recent Projects</a></li>
+                  <li><a href="/skill-district" className="hover:text-[var(--brand-yellow)] transition-colors">Skill District</a></li>
+                  <li>
+                    <a href="/careers" className="hover:text-[var(--brand-yellow)] transition-colors inline-flex items-center gap-1.5 font-bold text-white">
+                      <span>Careers</span>
+                      <span className="px-1.5 py-0.2 rounded text-[9px] font-black bg-gradient-to-r from-[var(--brand-orange)] to-[var(--brand-magenta)] text-white">HIRING</span>
+                    </a>
+                  </li>
+                  <li><a href="/contact" className="hover:text-[var(--brand-yellow)] transition-colors">Contact Us</a></li>
                 </ul>
               </div>
 
@@ -179,11 +185,11 @@ export function Footer({ onOpenContact }: FooterProps) {
                   Explore
                 </h4>
                 <ul className="space-y-3 text-sm font-medium text-slate-300">
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">Performance PPC Ads</a></li>
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">Viral 9:16 Video Reels</a></li>
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">Next.js Web Engineering</a></li>
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">Local Jalgaon SEO #1</a></li>
-                  <li><a href="#services" className="hover:text-[var(--brand-yellow)] transition-colors">WhatsApp Automation</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Performance PPC Ads</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Viral Video Reels</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Next.js Web Engineering</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Interactive Web Invitations</a></li>
+                  <li><a href="/services" className="hover:text-[var(--brand-yellow)] transition-colors">Local Jalgaon SEO #1</a></li>
                 </ul>
               </div>
 
@@ -239,7 +245,7 @@ export function Footer({ onOpenContact }: FooterProps) {
         </div>
 
         {/* ================= FLOATING SPLIT SUB-FOOTER BAR ================= */}
-        <div className="mt-2.5 max-w-[92%] sm:max-w-[93%] flex flex-col sm:flex-row items-stretch gap-2.5 relative z-20">
+        <div className="mt-2.5 w-full max-w-[100%] sm:max-w-[93%] flex flex-col sm:flex-row items-stretch gap-2.5 relative z-20">
           
           {/* Shorter Sunset Brand Gradient Main Bar */}
           <div className="flex-1 bg-gradient-to-r from-[var(--brand-yellow)] via-[var(--brand-orange)] to-[var(--brand-magenta)] text-white rounded-b-[14px] sm:rounded-b-[18px] px-6 sm:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-black shadow-xl border border-white/20">

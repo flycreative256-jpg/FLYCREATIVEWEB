@@ -47,11 +47,11 @@ export function ContactModal({ isOpen, onClose, defaultService }: ContactModalPr
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-2xl z-10 my-8"
+          className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-5 sm:p-10 shadow-2xl z-10 my-8 max-h-[90vh] overflow-y-auto"
         >
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors"
+            className="absolute top-5 right-5 sm:top-6 sm:right-6 p-2 rounded-full bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
