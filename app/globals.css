@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #FAFAFC;
+    --brand-yellow: #F4B333;
+    --brand-orange: #F37936;
+    --brand-purple: #802F71;
+    --brand-magenta: #BD217E;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: var(--brand-orange);
+    selection-color: #ffffff;
+  }
+}
+
+/* --- OBSIDIAN LUXURY CARD SYSTEM (Matching User Reference Image) --- */
+.obsidian-card {
+  background: linear-gradient(145deg, #121124 0%, #1A1832 50%, #121124 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -10px rgba(18, 17, 36, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.obsidian-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.obsidian-card-hover:hover {
+  border-color: rgba(243, 121, 54, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(243, 121, 54, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Sunset Button Gradient */
+.btn-sunset {
+  background: linear-gradient(135deg, #F4B333 0%, #F37936 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 10px 25px -5px rgba(243, 121, 54, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-sunset:hover {
+  background: linear-gradient(135deg, #F37936 0%, #BD217E 100%);
+  box-shadow: 0 15px 30px -5px rgba(243, 121, 54, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Dark Pill Badge */
+.badge-dark-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F4B333;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Glowing text & gradient effects */
+.gradient-text-brand {
+  background: linear-gradient(135deg, #F37936 0%, #BD217E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #F4B333 0%, #F37936 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-magenta {
+  background: linear-gradient(135deg, #802F71 0%, #BD217E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-orange);
+}
