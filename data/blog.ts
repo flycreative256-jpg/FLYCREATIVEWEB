@@ -128,5 +128,47 @@ Integrating lead capture forms, WhatsApp automation, targeted social advertising
     date: "Jun 25, 2026",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: "generative-engine-optimization-guide",
+    title: "Generative Engine Optimization (GEO): How to Get Cited by ChatGPT & Google Gemini in 2026",
+    slug: "generative-engine-optimization-guide",
+    category: "SEO",
+    excerpt: "Learn how modern agencies optimize websites for AI search engines, entity graph knowledge, and conversational queries to dominate AI Overviews.",
+    content: `Search is evolving rapidly from traditional 10 blue links into conversational AI answers powered by ChatGPT Search, Google Gemini AI Overviews, and Perplexity AI.
+
+### 1. Direct Entity Definition & Authoritative Schema
+AI models don't just count keywords; they parse semantic entity graphs. Implementing structured LocalBusiness, Organization, and Service Schema with clear "knowsAbout" parameters allows AI crawlers to cite your business as a subject-matter authority.
+
+### 2. High Information-Gain Content
+Generic AI-generated filler gets ignored. AI engines prioritize original data, verified case studies, exact numerical metrics, and unique business insights.
+
+### 3. Clear Q&A Semantic Formatting
+Structuring key questions as prominent headings with concise, factual answers directly underneath increases the probability of being selected as a primary source for conversational summaries.`,
+    author: "Fly Creative Strategy Lab",
+    date: "Aug 15, 2026",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    id: "web-invitations-modern-standard",
+    title: "Interactive Web Invitations: The New Luxury Standard for Weddings & Events in India",
+    slug: "web-invitations-modern-standard",
+    category: "Web",
+    excerpt: "Why modern couples and corporate event planners are replacing static PDF/paper cards with animated mobile-first digital web invitations with live WhatsApp RSVP.",
+    content: `Traditional wedding and event invitations are cumbersome to distribute and offer no real-time engagement. Interactive web invitations are transforming the luxury event industry across India.
+
+### 1. Instant 1-Click WhatsApp RSVP
+Guests can confirm attendance, dietary preferences, and plus-ones with a single tap, with responses recorded automatically on a real-time guest list dashboard.
+
+### 2. Embedded Google Maps Navigation
+Eliminate confusing directions. Guests can click directly on the interactive invite to open turn-by-turn navigation straight to the venue.
+
+### 3. Multimedia Timeline & Live Music
+Bespoke web invitations incorporate background music, high-definition photo galleries, romantic story timelines, and countdown clocks to build excitement before the big day.`,
+    author: "Fly Digital Experience Team",
+    date: "Aug 14, 2026",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80"
   }
 ];
