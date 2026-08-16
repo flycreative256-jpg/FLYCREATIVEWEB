@@ -111,10 +111,8 @@ export function InstagramSection() {
                   src={embedUrl}
                   title="Fly Creative Live Instagram Profile"
                   className="w-full h-[340px] sm:h-[360px] border-none overflow-hidden rounded-2xl"
-                  scrolling="no"
-                  allowTransparency={true}
-                  frameBorder="0"
                   loading="lazy"
+                  allow="encrypted-media"
                 />
               </div>
             </motion.div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteData } from "@/data/siteData";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -58,6 +60,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1
     }
+  },
+  verification: {
+    google: "7KajV4c6FfydJOSLCWJfSyta2-1AVfQ430620ZRq--I"
   }
 };
 
@@ -66,62 +71,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLdSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": siteData.name,
-    "alternateName": "Fly Creative Solutions Jalgaon",
-    "image": `${siteData.websiteUrl}/logo/fly-logo-color.png`,
-    "description": "Leading Digital Marketing, Web Development, Branding, and SEO Agency headquartered in Jalgaon, Maharashtra, serving businesses across India.",
-    "telephone": siteData.phone,
-    "email": siteData.email,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Plot No. 14, Near M.J. College Rd",
-      "addressLocality": "Jalgaon",
-      "addressRegion": "Maharashtra",
-      "postalCode": "425001",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "21.0077",
-      "longitude": "75.5626"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Jalgaon"
-      },
-      {
-        "@type": "State",
-        "name": "Maharashtra"
-      },
-      {
-        "@type": "Country",
-        "name": "India"
-      }
-    ],
-    "url": siteData.websiteUrl,
-    "priceRange": "₹₹",
-    "sameAs": [
-      siteData.socials.instagram,
-      siteData.socials.facebook,
-      siteData.socials.linkedin,
-      siteData.socials.youtube
-    ]
-  };
-
   return (
     <html lang="en" className={`scroll-smooth ${jakarta.variable}`}>
       <head>
         <link rel="icon" href="/logo/IMG_2767.PNG" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
-        />
+        <StructuredData />
       </head>
       <body className="antialiased bg-[#070b14] text-slate-100 min-h-screen">
+        <GoogleAnalytics gaId="G-E0PH2SS5LW" />
         {children}
       </body>
     </html>

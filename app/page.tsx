@@ -22,6 +22,7 @@ import { homeFaqs } from "@/data/faq";
 import { ContactModal } from "@/components/modals/ContactModal";
 import { ServiceModal } from "@/components/modals/ServiceModal";
 import { BlogModal } from "@/components/modals/BlogModal";
+import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 
 import { Service } from "@/data/services";
 import { BlogPost } from "@/data/blog";
@@ -56,6 +57,7 @@ export default function Home() {
       </main>
 
       <Footer onOpenContact={() => handleOpenContact()} />
+      <FloatingWhatsApp />
 
       <ContactModal
         isOpen={isContactOpen}

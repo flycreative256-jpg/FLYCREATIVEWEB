@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ContactModal } from "@/components/modals/ContactModal";
+import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 
 interface PageWrapperProps {
   children: React.ReactNode;
@@ -35,6 +36,7 @@ export function PageWrapper({ children }: PageWrapperProps) {
         {children}
       </main>
       <Footer onOpenContact={() => handleOpenContact()} />
+      <FloatingWhatsApp />
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
