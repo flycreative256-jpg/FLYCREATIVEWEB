@@ -29,8 +29,17 @@ export function ContactPageClient() {
     "Other / Custom Project"
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+    } catch (err) {
+      console.warn("Contact API sync error:", err);
+    }
     const msg = `Hi Fly Creative Solutions!%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service}%0A%0AMessage: ${formData.message}`;
     window.open(`https://wa.me/917276400626?text=${msg}`, "_blank");
     setSubmitted(true);

@@ -17,9 +17,18 @@ export function Footer({ onOpenContact }: FooterProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
+      try {
+        await fetch("/api/newsletter", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email })
+        });
+      } catch (err) {
+        console.warn("Newsletter sync error:", err);
+      }
       setSubscribed(true);
       setTimeout(() => setSubscribed(false), 4000);
       setEmail("");

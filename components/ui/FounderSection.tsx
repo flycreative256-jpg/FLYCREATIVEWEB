@@ -16,7 +16,7 @@ export function FounderSection() {
 
   const linkedinUrl = "https://www.linkedin.com/in/aaftab-shah-b72272194/";
   const instagramUrl = "https://www.instagram.com/the_aaftab_313/";
-  const whatsappUrl = "https://wa.me/919325988188?text=Hi%20Aaftab,%20I'd%20like%20to%20discuss%20a%20project";
+  const whatsappUrl = "https://wa.me/917276400626?text=Hi%20Aaftab,%20I'd%20like%20to%20discuss%20a%20project";
 
   return (
     <section ref={containerRef} className="relative py-16 sm:py-24 bg-gradient-to-b from-[#030307] via-[#100518] to-[#030307] overflow-hidden select-none">

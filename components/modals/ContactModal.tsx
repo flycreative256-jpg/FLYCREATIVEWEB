@@ -13,6 +13,8 @@ interface ContactModalProps {
 
 export function ContactModal({ isOpen, onClose, defaultService }: ContactModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,13 +23,33 @@ export function ContactModal({ isOpen, onClose, defaultService }: ContactModalPr
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2500);
+    setLoading(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          onClose();
+        }, 3000);
+      } else {
+        setErrorMsg(data.error || "Failed to send message. Please try again.");
+      }
+    } catch {
+      setErrorMsg("Network error. Please WhatsApp us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -145,8 +167,20 @@ export function ContactModal({ isOpen, onClose, defaultService }: ContactModalPr
                   />
                 </div>
 
-                <Button type="submit" variant="primary" size="lg" className="w-full shadow-lg shadow-[var(--brand-orange)]/25">
-                  <span>Send Consultation Request</span>
+                {errorMsg && (
+                  <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs font-bold">
+                    {errorMsg}
+                  </div>
+                )}
+
+                <Button 
+                  type="submit" 
+                  variant="primary" 
+                  size="lg" 
+                  disabled={loading}
+                  className="w-full shadow-lg shadow-[var(--brand-orange)]/25 cursor-pointer disabled:opacity-60"
+                >
+                  <span>{loading ? "Sending..." : "Send Consultation Request"}</span>
                   <Send className="w-4 h-4 ml-2" />
                 </Button>
               </form>

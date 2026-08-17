@@ -186,12 +186,33 @@ export function CareersPageClient() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const selectedRole = formData.position === "Select Designation" ? "General / Other" : formData.position;
+    const selectedRole = formData.position === "Select Designation" ? "General Application" : formData.position;
     const fileNameInfo = selectedFile ? selectedFile.name : "N/A";
 
+    // 1. Send Application to Backend API
+    try {
+      await fetch("/api/careers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          position: selectedRole,
+          experience: formData.experience,
+          driveLink: formData.portfolioUrl,
+          note: formData.message,
+          fileName: fileNameInfo
+        })
+      });
+    } catch (err) {
+      console.warn("Backend sync warning:", err);
+    }
+
+    // 2. Open Direct WhatsApp Application Routing
     const text = `*New Job Application - Fly Creative Solutions*%0A%0A` +
       `*Designation:* ${selectedRole}%0A` +
       `*Name:* ${formData.name}%0A` +
