@@ -15,11 +15,9 @@ interface ServiceModalProps {
 }
 
 export function ServiceModal({ service, onClose, onOpenContact, onSelectContact }: ServiceModalProps) {
-  if (!service) return null;
-
   const handleContact = () => {
     onClose();
-    if (onSelectContact) {
+    if (onSelectContact && service) {
       onSelectContact(service.title);
     } else if (onOpenContact) {
       onOpenContact();
@@ -28,27 +26,32 @@ export function ServiceModal({ service, onClose, onOpenContact, onSelectContact 
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="fixed inset-0 bg-slate-900/60 backdrop-blur-md"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-2xl z-10 my-8 max-h-[90vh] overflow-y-auto"
-        >
-          <button
+      {service && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto touch-manipulation">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm"
+          />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 12 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            style={{ willChange: "transform, opacity" }}
+            className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl z-10 my-auto max-h-[92vh] overflow-y-auto"
           >
-            <X className="w-5 h-5" />
-          </button>
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-200 active:scale-90 transition-all cursor-pointer"
+              aria-label="Close Modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
           <div className="space-y-6">
             <Badge variant="brand">{service.badge}</Badge>
@@ -88,6 +91,7 @@ export function ServiceModal({ service, onClose, onOpenContact, onSelectContact 
 
         </motion.div>
       </div>
+      )}
     </AnimatePresence>
   );
 }

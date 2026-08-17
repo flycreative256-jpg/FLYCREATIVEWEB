@@ -44,13 +44,14 @@ export function Header({ onOpenContact }: HeaderProps) {
   return (
     <>
       {/* Dark Obsidian Floating Hanging Curved Pill Header */}
-      <header className="fixed top-3 sm:top-5 inset-x-0 z-40 max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+      <header className="fixed top-3 sm:top-5 inset-x-0 z-40 max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 pointer-events-auto touch-manipulation">
         <div
-          className={`w-full rounded-2xl transition-all duration-300 obsidian-card ${
+          className={`w-full rounded-2xl transition-all duration-300 ${
             isScrolled
-              ? "bg-[#121124]/95 backdrop-blur-xl border border-white/20 shadow-2xl shadow-purple-950/60 px-4 sm:px-6 py-1.5"
-              : "bg-[#121124]/90 backdrop-blur-lg border border-white/15 shadow-xl shadow-purple-950/40 px-4 sm:px-6 py-2"
+              ? "bg-[#0D0B1C] border border-white/20 shadow-2xl shadow-purple-950/80 px-4 sm:px-6 py-1.5"
+              : "bg-[#0D0B1C] border border-white/15 shadow-xl shadow-purple-950/60 px-4 sm:px-6 py-2"
           }`}
+          style={{ backgroundColor: "#0D0B1C" }}
         >
           <div className="flex items-center justify-between gap-4">
 
@@ -60,7 +61,7 @@ export function Header({ onOpenContact }: HeaderProps) {
               className="group focus:outline-none shrink-0"
               aria-label="Fly Creative Solutions - Home"
             >
-              <div className="relative w-[180px] sm:w-[220px] md:w-[270px] h-[48px] sm:h-[58px] md:h-[72px] group-hover:scale-105 transition-transform duration-300">
+              <div className="relative w-[170px] sm:w-[220px] md:w-[270px] h-[44px] sm:h-[58px] md:h-[72px] group-hover:scale-105 transition-transform duration-300">
                 {/* Layer A: fly-logo-color — Full color FLYCREATIVE */}
                 <motion.img
                   src="/logo/fly-logo-color.png"
@@ -105,27 +106,24 @@ export function Header({ onOpenContact }: HeaderProps) {
 
             {/* ── CTA Button ── */}
             <div className="hidden sm:flex items-center shrink-0">
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+              <button
                 onClick={onOpenContact}
-                className="btn-sunset px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg group/btn cursor-pointer"
+                className="btn-sunset px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg group/btn cursor-pointer active:scale-95 transition-transform"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-              </motion.button>
+              </button>
             </div>
 
             {/* ── Mobile Hamburger ── */}
             <div className="lg:hidden flex items-center shrink-0">
-              <motion.button
-                whileTap={{ scale: 0.92 }}
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-full bg-white/10 border border-white/20 text-white hover:text-[var(--brand-orange)] focus:outline-none cursor-pointer"
+                className="p-2.5 rounded-full bg-white/10 border border-white/20 text-white hover:text-[var(--brand-orange)] focus:outline-none cursor-pointer active:scale-90 transition-transform"
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </motion.button>
+              </button>
             </div>
 
           </div>
@@ -136,15 +134,18 @@ export function Header({ onOpenContact }: HeaderProps) {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -15, scale: 0.95 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed inset-x-3 top-[72px] sm:top-[80px] z-30 lg:hidden max-w-xl mx-auto"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            className="fixed inset-x-3 top-[68px] sm:top-[76px] z-30 lg:hidden max-w-xl mx-auto touch-manipulation"
           >
-            <div className="obsidian-card rounded-3xl p-5 sm:p-6 border border-white/20 shadow-2xl space-y-4 backdrop-blur-2xl">
+            <div 
+              className="rounded-3xl p-5 sm:p-6 border border-white/20 shadow-2xl space-y-4 bg-[#0D0B1C]"
+              style={{ backgroundColor: "#0D0B1C" }}
+            >
               <div className="flex flex-col space-y-1.5">
-                {siteData.navLinks.map((link, idx) => (
+                {siteData.navLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -163,14 +164,16 @@ export function Header({ onOpenContact }: HeaderProps) {
               </div>
 
               <div className="pt-4 border-t border-slate-800/80 space-y-3">
-                <motion.button
-                  whileTap={{ scale: 0.97 }}
-                  onClick={() => { setMobileMenuOpen(false); onOpenContact(); }}
-                  className="btn-sunset w-full py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[var(--brand-orange)]/20"
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenContact();
+                  }}
+                  className="btn-sunset w-full py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[var(--brand-orange)]/20 active:scale-95 transition-transform"
                 >
                   <span>Let&apos;s Talk Project</span>
                   <ArrowRight className="w-4 h-4" />
-                </motion.button>
+                </button>
                 <div className="flex items-center justify-around text-xs text-slate-300 pt-1 font-medium">
                   <a href={`tel:${siteData.phone}`} className="flex items-center gap-1.5 hover:text-[var(--brand-orange)] transition-colors py-1">
                     <Phone className="w-3.5 h-3.5 text-[var(--brand-orange)]" /> {siteData.phone}
