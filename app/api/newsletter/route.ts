@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { syncToGoogleSheets } from "@/lib/googleSheets";
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,7 +15,6 @@ export async function POST(req: NextRequest) {
     const cleanEmail = email.trim().toLowerCase();
 
     console.log("📬 [NEW NEWSLETTER SUBSCRIBER]:", cleanEmail, "at", new Date().toISOString());
-    syncToGoogleSheets("NEWSLETTER", { email: cleanEmail }).catch((err) => console.warn("Google Sheet newsletter sync notice:", err));
 
     return NextResponse.json(
       {

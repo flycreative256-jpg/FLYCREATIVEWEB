@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { syncToGoogleSheets } from "@/lib/googleSheets";
 
 export async function POST(req: NextRequest) {
   try {
@@ -41,9 +40,8 @@ export async function POST(req: NextRequest) {
       source: "Fly Creative Website Contact Form"
     };
 
-    // 2. Server Log & Google Sheets Sync
+    // 2. Server Log
     console.log("🚀 [NEW LEAD RECEIVED - FLY CREATIVE SOLUTIONS]:", JSON.stringify(cleanData, null, 2));
-    syncToGoogleSheets("INQUIRY", cleanData).catch((err) => console.warn("Google Sheet background sync notice:", err));
 
     // 3. Success Response
     return NextResponse.json(
