@@ -40,6 +40,7 @@ export function CircularOrbitGraphic() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform" }}
         className="absolute w-[96%] h-[96%] rounded-full"
       >
         {/* Node 1: Instagram (Top Center) */}
@@ -47,6 +48,7 @@ export function CircularOrbitGraphic() {
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+            style={{ willChange: "transform" }}
             className="w-14 h-14 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shadow-[0_0_25px_rgba(225,29,72,0.6)] border-2 border-white/40 flex items-center justify-center group hover:scale-130 transition-transform cursor-pointer"
           >
             <svg className="w-7 h-7 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,6 +64,7 @@ export function CircularOrbitGraphic() {
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+            style={{ willChange: "transform" }}
             className="w-14 h-14 rounded-full bg-red-600 shadow-[0_0_25px_rgba(220,38,38,0.6)] border-2 border-white/40 flex items-center justify-center group hover:scale-130 transition-transform cursor-pointer"
           >
             <svg className="w-7 h-7 text-white drop-shadow" viewBox="0 0 24 24" fill="currentColor">
@@ -75,6 +78,7 @@ export function CircularOrbitGraphic() {
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
+            style={{ willChange: "transform" }}
             className="w-14 h-14 rounded-full bg-blue-600 shadow-[0_0_25px_rgba(37,99,235,0.6)] border-2 border-white/40 flex items-center justify-center group hover:scale-130 transition-transform cursor-pointer"
           >
             <Share2 className="w-6 h-6 text-white drop-shadow" />
@@ -108,6 +112,7 @@ export function CircularOrbitGraphic() {
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform" }}
         className="absolute w-[70%] h-[70%] rounded-full"
       >
         {/* Node 1: Google Search (Top Right) */}
@@ -115,6 +120,7 @@ export function CircularOrbitGraphic() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+            style={{ willChange: "transform" }}
             className="w-12 h-12 rounded-full glass-panel bg-slate-900/90 border-2 border-white/30 shadow-[0_0_20px_rgba(244,179,51,0.5)] flex items-center justify-center group hover:scale-130 transition-transform cursor-pointer"
           >
             <Search className="w-6 h-6 text-[var(--brand-yellow)]" />
@@ -126,6 +132,7 @@ export function CircularOrbitGraphic() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+            style={{ willChange: "transform" }}
             className="w-12 h-12 rounded-full bg-emerald-500 shadow-[0_0_25px_rgba(16,185,129,0.6)] border-2 border-white/40 flex items-center justify-center group hover:scale-130 transition-transform cursor-pointer"
           >
             <MessageCircle className="w-6 h-6 text-white drop-shadow" />
@@ -158,6 +165,7 @@ export function CircularOrbitGraphic() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        style={{ willChange: "transform" }}
         className="absolute w-[46%] h-[46%] rounded-full"
       >
         {/* Node 1: Web Tech / Globe (Top Left) */}
