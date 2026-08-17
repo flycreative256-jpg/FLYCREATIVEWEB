@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { syncToGoogleSheets } from "@/lib/googleSheets";
 
 export async function POST(req: NextRequest) {
   try {
@@ -43,8 +44,9 @@ export async function POST(req: NextRequest) {
       status: "PENDING_REVIEW"
     };
 
-    // 2. Server Log
+    // 2. Server Log & Google Sheets Sync
     console.log("💼 [NEW JOB APPLICATION RECEIVED]:", JSON.stringify(applicationData, null, 2));
+    syncToGoogleSheets("CAREER", applicationData).catch((err) => console.warn("Google Sheet career sync notice:", err));
 
     // 3. Success Response
     return NextResponse.json(
