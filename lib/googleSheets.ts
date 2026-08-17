@@ -18,13 +18,14 @@ export async function syncToGoogleSheets(type: SheetSyncType, payload: Record<st
     const response = await fetch(webhookUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
       },
       body: JSON.stringify({
         type,
         data: payload,
         timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
-      })
+      }),
+      redirect: "follow"
     });
 
     if (response.ok) {

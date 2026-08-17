@@ -28,28 +28,41 @@ export function ContactModal({ isOpen, onClose, defaultService }: ContactModalPr
     setLoading(true);
     setErrorMsg("");
 
+    // 1. Send Lead to Backend & Google Sheets CRM
     try {
-      const res = await fetch("/api/contact", {
+      await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
       });
-
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          onClose();
-        }, 3000);
-      } else {
-        setErrorMsg(data.error || "Failed to send message. Please try again.");
-      }
-    } catch {
-      setErrorMsg("Network error. Please WhatsApp us directly.");
-    } finally {
-      setLoading(false);
+    } catch (err) {
+      console.warn("Background API sync notice:", err);
     }
+
+    // 2. Open Direct WhatsApp with Formatted Lead Info
+    const whatsappMsg = `*New Consultation Inquiry - Fly Creative Solutions*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Phone:* ${formData.phone}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Service Required:* ${formData.service}%0A` +
+      `*Project Details:* ${formData.message || "Looking to scale business."}`;
+
+    window.open(`https://wa.me/917276400626?text=${whatsappMsg}`, "_blank");
+
+    // 3. Show Success & Auto-Close
+    setSubmitted(true);
+    setLoading(false);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: defaultService || "Digital Marketing",
+        message: ""
+      });
+      onClose();
+    }, 3000);
   };
 
   if (!isOpen) return null;
