@@ -48,8 +48,8 @@ export function Header({ onOpenContact }: HeaderProps) {
         <div
           className={`w-full rounded-2xl transition-all duration-300 ${
             isScrolled
-              ? "bg-[#0D0B1C] border border-white/20 shadow-2xl shadow-purple-950/80 px-4 sm:px-6 py-1.5"
-              : "bg-[#0D0B1C] border border-white/15 shadow-xl shadow-purple-950/60 px-4 sm:px-6 py-2"
+              ? "bg-[#0D0B1C] border border-white/15 shadow-[0_14px_36px_rgba(0,0,0,0.35)] px-4 sm:px-6 py-1.5"
+              : "bg-[#0D0B1C] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.25)] px-4 sm:px-6 py-2"
           }`}
           style={{ backgroundColor: "#0D0B1C" }}
         >
