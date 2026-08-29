@@ -78,7 +78,7 @@ Branding is your core identity: your promise, visual aesthetics, trust factor, a
     author: "Fly Brand Strategy Group",
     date: "Jul 28, 2026",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
   },
   {
     id: "nextjs-website-speed-boost",
