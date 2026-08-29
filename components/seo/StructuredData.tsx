@@ -81,8 +81,7 @@ export function StructuredData() {
     "sameAs": [
       siteData.socials.instagram,
       siteData.socials.facebook,
-      siteData.socials.linkedin,
-      siteData.socials.youtube
+      siteData.socials.linkedin
     ],
     "knowsAbout": [
       "Digital Marketing",

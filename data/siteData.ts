@@ -12,7 +12,6 @@ export const siteData = {
     instagram: "https://instagram.com/flycreativesolutions",
     facebook: "https://facebook.com/flycreativesolutions",
     linkedin: "https://www.linkedin.com/company/fly-creative-solutions/",
-    youtube: "https://youtube.com/@flycreativesolutions",
     whatsapp: "https://wa.me/917276400626?text=Hi%20Fly%20Creative%20Solutions!%20I%20want%20to%20grow%20my%20brand."
   },
   stats: [
