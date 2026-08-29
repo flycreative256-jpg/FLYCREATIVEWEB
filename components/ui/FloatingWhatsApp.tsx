@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageSquare, Sparkles, TrendingUp, Monitor, Users, ArrowUpRight } from "lucide-react";
+import { X, MessageSquare, TrendingUp, Monitor, Users, ArrowUpRight } from "lucide-react";
 
 export function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);

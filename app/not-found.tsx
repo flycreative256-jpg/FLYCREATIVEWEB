@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { AmbientBackgroundElements } from "@/components/ui/AmbientBackgroundElements";
 
 export default function NotFound() {
   return (

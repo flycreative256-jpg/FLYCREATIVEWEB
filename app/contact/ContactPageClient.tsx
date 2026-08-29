@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send, MessageCircle, Clock, ArrowRight, PlayCircle, Link2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, MessageCircle, Clock, ArrowRight } from "lucide-react";
 
 import { siteData } from "@/data/siteData";
 import { GetInTouchSection } from "@/sections/GetInTouchSection";

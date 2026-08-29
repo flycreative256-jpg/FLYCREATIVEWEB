@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Cpu, Sparkles, Zap, Flame, TrendingUp, Palette, Rocket, ArrowUpRight } from "lucide-react";
+import { Flame, TrendingUp, Palette, Rocket, ArrowUpRight } from "lucide-react";
 
 export function AIAgencyCommandCenter() {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);

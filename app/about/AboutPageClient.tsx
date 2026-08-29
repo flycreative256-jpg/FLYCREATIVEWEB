@@ -10,7 +10,6 @@ import {
   Sparkles, Target, Heart, Zap, Users, Award, ArrowRight,
   CheckCircle2, TrendingUp, Globe, Lightbulb, Shield
 } from "lucide-react";
-import { siteData } from "@/data/siteData";
 import { FounderSection } from "@/components/ui/FounderSection";
 import { FaqSection } from "@/sections/FaqSection";
 import { aboutFaqs } from "@/data/faq";

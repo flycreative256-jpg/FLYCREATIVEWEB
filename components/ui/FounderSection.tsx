@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MessageCircle, Star, Sparkles, ArrowUpRight, Award, TrendingUp, ShieldCheck } from "lucide-react";
+import { MessageCircle, Star, Sparkles, ArrowUpRight } from "lucide-react";
 
 export function FounderSection() {
   const containerRef = useRef(null);

@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Sparkles, ShieldCheck, Zap, BarChart3, Users, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 
 interface FeaturesSectionProps {
   onOpenContact: () => void;

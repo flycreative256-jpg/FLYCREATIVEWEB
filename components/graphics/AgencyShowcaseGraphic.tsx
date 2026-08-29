@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { TrendingUp, Sparkles, ShieldCheck, Zap, Layers, BarChart2 } from "lucide-react";
+import { TrendingUp, Sparkles, ShieldCheck, Zap } from "lucide-react";
 
 export function AgencyShowcaseGraphic() {
   const channelNodes = [
